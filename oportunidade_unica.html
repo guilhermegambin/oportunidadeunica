@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Oportunidade única</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Oportunidade única</h2>
+  <p>Produtos de loja com preços especiais</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Coloque uma característica de busca aqui..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Fornecedor</th>
+        <th>Linha</th>
+         <th>Produto</th>
+         <th>Medida</th> 
+        <th>Observação</th>
+                <th>PB Bruto</th>
+                <th>Tipo Produto</th>
+                <th>Conjunto</th>
+                <th>Observações</th>
+                <th>À vista - 1x </th>
+                <th>À vista 1x - Promo</th>
+                <th>Valor Min. Promo 1+5</th>
+                <th>Valor Min. Promo 1+5</th>
+                <th>Valor Min. Promo 1+9</th>
+                <th>Valor Min. Promo 1+9</th>
+
+
+
+
+
+
+
+
+
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>1234</td>
+        <td>Standel</td>
+        <td>Jantar</td>
+        <td>Mesa Fulano de tal</td>
+        <td>1,50 x 1,50</td>
+        <td>Tampo Imbuia Hans</td>
+        <td>R$ 2.950,00</td>
+        <td>LOJA ARARAQUARA</td>
+        <td>Conj. 1</td>
+        <td>Observações teste</td>
+        <td>30%</td>
+        <td>3790</td>
+        <td>30%</td>
+        <td>4.280</td>
+        <td>35%</td>
+        <td>4.458</td>
+     </tr>
+      
+      <tr>
+        <td>5678</td>
+        <td>Standel</td>
+        <td>Jantar</td>
+        <td>Mesa CICLANO</td>
+        <td>1,80 x 1,80</td>
+        <td>Tampo OFF WHITE</td>
+        <td>R$ 2.950,00</td>
+        <td>LOJA RIO CLARO</td>
+        <td>Conj. 2</td>
+        <td>Observações teste</td>
+        <td>30%</td>
+        <td>6790</td>
+        <td>30%</td>
+        <td>8.280</td>
+        <td>38%</td>
+        <td>9.458</td>
+     </tr>
+      
+      
+    </tbody>
+  </table>
+  
+  <p8>Desenvolvimento Guilherme Gambin</p8>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
+
